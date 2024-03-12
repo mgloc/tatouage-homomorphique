@@ -1,1 +1,10 @@
+black==24.2.0
+click==8.1.7
 gmpy2==2.1.5
+mypy-extensions==1.0.0
+numpy==1.26.4
+packaging==24.0
+pathspec==0.12.1
+phe==1.5.0
+pillow==10.2.0
+platformdirs==4.2.0

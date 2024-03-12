@@ -3,11 +3,12 @@
 from PIL import Image
 from utils.obj import Vector
 
-def image_to_vector(image:Image, size):
+
+def image_to_vector(image: Image, size):
     """Converts an image to vectors"""
     image_height, image_width = image._Size
-    
-    for i in range(image_height*image_width//size):
+
+    for i in range(image_height * image_width // size):
         vector = vector
 
     return vector
