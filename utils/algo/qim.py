@@ -35,7 +35,7 @@ class QIM:
         return np.random.choice((0, 1), l)
 
 
-if __name__ == "__main__":
+def test():
     qim = QIM(delta=1)
 
     m = np.random.randint(0, 255, 10)
@@ -48,3 +48,7 @@ if __name__ == "__main__":
     print(f"Resultat QIM {y}")
     print(f"Resultat QIM extraction {e} ")
     print(f"Verif {b == e}")
+
+
+if __name__ == "__main__":
+    test()

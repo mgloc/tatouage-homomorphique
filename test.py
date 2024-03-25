@@ -1,6 +1,6 @@
 import numpy as np
 from numpy.typing import ArrayLike
-from utils.obj import Vector
+from utils.objects.vector import Vector
 from utils.algo.paillier_enc import Paillier
 
 # pylint: disable=protected-access
@@ -33,6 +33,7 @@ class VectorTest:
 
     def test2(self):
         print("--TEST 2--")
+        print(self.vector._blocks[0])
         self.vector.encrypt(self.paillier)
         print([x.ciphertext() for x in self.vector._blocks[0]])
         self.vector.decrypt(self.paillier)

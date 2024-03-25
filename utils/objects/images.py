@@ -1,7 +1,7 @@
 # Contient tout ce qui touche à l'édition d'image
 
 from PIL import Image
-from utils.obj import Vector
+from utils.objects.vector import Vector
 
 
 def image_to_vector(image: Image, size):
