@@ -1,7 +1,8 @@
-import numpy as np
 import argparse
+
+import numpy as np
 from utils.objects.vector import Vector, VectorEncrypted
-from utils.objects.images import get_image, image_to_vector, vector_to_image
+from utils.objects.images import get_image, image_to_vector
 from utils.algo.paillier_enc import Paillier
 from utils.func import binbparray_to_string, string_to_binbparray
 
