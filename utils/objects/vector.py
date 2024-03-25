@@ -37,6 +37,9 @@ class VectorBase:
         new_vector = self.__class__(self._blocks + other._blocks)
         return new_vector
 
+    def get_array(self):
+        return self._blocks
+
     def get_block(self, block_index: int, ciphertext: bool = False):
         if ciphertext:
             print("Warning: The block is not encrypted, returning the plaintext block.")

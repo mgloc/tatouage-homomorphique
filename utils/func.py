@@ -14,18 +14,16 @@ def string_bin_to_string(string: str) -> str:
 
 def string_bin_to_nparray(string: str, size: int | None = None) -> ArrayLike:
     """Renvoie un tableau numpy d'une chaîne composée de 0 et 1 transformée en un tableau
-    d'entiers de taille spécifiée. Remplit avec des 0 si la taille est trop grande."""
+    d'entiers de taille spécifiée. Retourne de taille size quitte à ajouter des 0 si la taille est trop grande."""
     n = len(string)
-    if size is not None:
-        n = max(n, size)
+    if size is None:
+        size = n
 
-    for i in range(n):
-        if i >= len(string):
+    for i in range(size):
+        if i >= n:
             string += "0"
-        else:
-            int(string[i])
 
-    return np.array([int(x) for x in string])
+    return np.array([int(string[i]) for i in range(size)])
 
 
 def nparray_to_string_bin(array: ArrayLike) -> str:
